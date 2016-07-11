@@ -1,15 +1,11 @@
 'use strict';
 
-function PostsFactory($http) {
-  function updateCompletedStatus(status, postId) {
-    return $http({
-      method: 'PUT',
-      url: '/api/posts/' + postId,
-      data: { status },
-    });
+function PostsFactory(/* $http */) {
+  function myCoolFnc() {
+    // function body
   }
 
-  return { updateCompletedStatus };
+  return { myCoolFnc };
 }
 
 angular
@@ -18,4 +14,3 @@ angular
 
 // A different method to add dependency injection.
 PostsFactory.$inject = ['$http'];
-
